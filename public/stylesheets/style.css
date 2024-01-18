@@ -126,14 +126,18 @@ body {
     position: fixed;
     z-index: 1;
     /* border-radius: 10px; */
-    width: 80%; 
+    width: 80%;
+    height:80%; 
     max-width: 600px;
-    height: auto;
+    /* height: auto; */
     left: 50%; 
     top: 30%;
-    /* transform: translate(-50%, -50%);  */
+    transform: translate(-50%, -30%); 
     overflow: hidden;
-    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgb(0,0,0);
+    border: 1px solid #888;
+    border-radius: 10px;
+
   }
   
   /* Modal Content */
@@ -141,9 +145,8 @@ body {
     background-color: black;
     color: #fff;
     padding: 10px 20px 20px 20px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     /* width: 90%; */
-    border-radius: 10px;
   }
   
   /* The Close Button */
@@ -188,6 +191,39 @@ body {
     border: 1px solid #aaaaaa;
     border-radius: 5px;
   }
+  label{
+    color: #888;
+  }
   .day-month-year {
     display: flex;
+    justify-content: space-around;
+  }
+  .day-month-year select {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+
+  }
+  .register{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 30px;
+    /* padding: 0px 80px 0px 80px; */
+  }
+  .register-next{
+    /* align-items: center; */
+    text-align: center;
+    background-color:rgb(29 144 240);;
+    width:40%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+  }
+  .register-next:hover {
+    background-color: #5079f1;
   }

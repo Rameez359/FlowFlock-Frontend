@@ -27,3 +27,22 @@
       modal.style.display = "none";
     }
   } 
+
+  var dayDropdown = document.getElementById('day');
+    var monthDropdown = document.getElementById('month');
+    var yearDropdown = document.getElementById('year');
+    var currentYear = new Date().getFullYear();
+
+    for (var i = 1; i <= 31; i++) {
+      var option = document.createElement('option');
+      option.value = i;
+      option.text = i;
+      dayDropdown.add(option);
+    }
+
+    for (var i = currentYear; i >= currentYear - 100; i--) {
+      var option = document.createElement('option');
+      option.value = i;
+      option.text = i;
+      yearDropdown.add(option);
+    }
