@@ -1,4 +1,4 @@
-const registerStepOne = () => {
+const registerStepOne = async () => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const month = document.getElementById('month').value;
@@ -13,5 +13,13 @@ const registerStepOne = () => {
         email: email,
         dateOfBirth: dateOfBirth,
     };
-    postData('http://localhost:3000/localSignupStepOne', data);
+    const response = await postData('http://localhost:3000/localSignupStepOne', data);
+    document.getElementById('modal-content-step-one').classList.add('display-none');
+    document.getElementById('modal-content-step-two').classList.remove('display-none');
+
+    span = document.getElementsByClassName('close')[0];
+
 };
+const registerStepTwo = ()=>{
+    const code = document.getElementById('verification-code').value;
+}

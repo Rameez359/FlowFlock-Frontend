@@ -61,72 +61,98 @@
         <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                <div class="signup-steps">
-                    <div class="close-btn">
-                        <span class="close">&times;</span>
+                <div class="modal-content-step-one" id="modal-content-step-one">
+                    <div class="signup-steps">
+                        <div class="close-btn">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="steps-count">
+                            <strong>Step 1 of 2</strong>
+                        </div>
                     </div>
-                    <div class="steps-count">
-                        <strong>Step 1 of 2</strong>
+                    <div class="create-account-info">
+                        <div class="create-account-text">
+                            <h1>Create your account</h1>
+                        </div>
+                        <div class="name">
+                            <div class="label">
+                                <label for="name"><strong>Name</strong></label>
+                            </div>
+                            <div class="signup-input">
+                                <input type="text" id="name" />
+                            </div>
+                        </div>
+                        <div class="email">
+                            <div class="label">
+                                <label for="email"><strong>Email</strong></label>
+                            </div>
+                            <div class="signup-input">
+                                <input type="text" id="email" />
+                            </div>
+                        </div>
+                        <div class="date-of-birth">
+                            <div class="dob-text">
+                                <h4>Date of birth</h4>
+                            </div>
+                            <div class="day-month-year">
+                                <div class="month">
+                                    <label for="month"><strong>Month</strong></label>
+                                    <select id="month">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <div class="day">
+                                    <div class="dob-label"></div>
+                                    <label for="day"><strong>Day</strong></label>
+                                    <select id="day"></select>
+                                </div>
+                                <div class="year">
+                                    <label for="year"><strong>Year</strong></label>
+                                    <select id="year" name="year"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <a class="register-next" onclick="registerStepOne()">
+                            <strong>Register</strong>
+                        </a>
                     </div>
                 </div>
-                <div class="create-account-info">
-                    <div class="create-account-text">
-                        <h1>Create your account</h1>
-                    </div>
-                    <div class="name">
-                        <div class="label">
-                            <label for="name"><strong>Name</strong></label>
+                <div class="modal-content-step-two display-none" id="modal-content-step-two">
+                    <div class="signup-steps">
+                        <div class="close-btn">
+                            <a class="close" onclick="close()">&times;</a>
                         </div>
-                        <div class="signup-input">
-                            <input type="text" id="name" />
+                        <div class="steps-count">
+                            <strong>Step 2 of 2</strong>
                         </div>
                     </div>
-                    <div class="email">
-                        <div class="label">
-                            <label for="email"><strong>Email</strong></label>
-                        </div>
-                        <div class="signup-input">
-                            <input type="text" id="email" />
-                        </div>
+                    <div class="create-account-info">
+                        <h1>Verify Your Account</h1>
                     </div>
-                    <div class="date-of-birth">
-                        <div class="dob-text">
-                            <h4>Date of birth</h4>
-                        </div>
-                        <div class="day-month-year">
-                            <div class="month">
-                                <label for="month"><strong>Month</strong></label>
-                                <select id="month">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                            </div>
-                            <div class="day">
-                                <div class="dob-label"></div>
-                                <label for="day"><strong>Day</strong></label>
-                                <select id="day"></select>
-                            </div>
-                            <div class="year">
-                                <label for="year"><strong>Year</strong></label>
-                                <select id="year" name="year"></select>
-                            </div>
-                        </div>
+                    <div class="create-account-info verify-account-text">
+                        <h4>Enter verification code</h4>    
                     </div>
-                </div>
-                <div class="register">
-                    <a class="register-next" onclick="registerStepOne()">
-                        <strong>Register</strong>
-                    </a>
+                    <div class="create-account-info signup-input">
+                        <input type="text" id="verification-code" />
+                    </div>
+                    <div class="create-account-info register">
+                        <a class="register-next" onclick="registerStepTwo()">
+                            <strong>Verify</strong>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
