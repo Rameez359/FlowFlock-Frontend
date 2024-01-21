@@ -1,6 +1,6 @@
 const postData = async (url, data) => {
     try {
-        const response = fetch(url, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
@@ -9,9 +9,9 @@ const postData = async (url, data) => {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const result = await response.json();
-        console.log(`Local Signup StepOne Ended with Response: [${JSON.stringify(result)}]`);
-        return result;
+        const responseData = await response.json();
+        console.log(responseData);
+        return responseData;
     } catch (error) {
         console.error('Error:', error);
     }
