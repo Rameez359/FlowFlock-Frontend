@@ -148,6 +148,9 @@ body {
     /* border: 1px solid #888; */
     /* width: 90%; */
   }
+  .display-none {
+    display: none;
+  }
   
   /* The Close Button */
   .close {
