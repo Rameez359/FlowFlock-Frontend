@@ -28,7 +28,7 @@ const registerStepTwo = async() => {
     const code = document.getElementById('verification-code').value;
     const userId = localStorage.getItem('userId');
     const data = {
-        code : code,
+        verificationCode : code,
         userId : userId
     }
 
