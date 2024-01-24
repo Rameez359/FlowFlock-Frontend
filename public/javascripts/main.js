@@ -1,7 +1,6 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 var btn = document.getElementById('create-account');
-var span = document.getElementsByClassName('close')[0];
 
 btn.onclick = function () {
     var newColor = 'lightblue';
@@ -9,15 +8,16 @@ btn.onclick = function () {
     modal.style.display = 'block';
 };
 
-span.onclick = function () {
-    modal.style.display = 'none';
-};
-
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
 };
+
+const closeModal = ()=> {
+    console.log("Working")
+    modal.style.display = 'none';
+}
 
 var dayDropdown = document.getElementById('day');
 var monthDropdown = document.getElementById('month');

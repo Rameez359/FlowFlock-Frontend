@@ -63,11 +63,11 @@
             <div class="modal-content">
                 <div class="modal-content-step-one" id="modal-content-step-one">
                     <div class="signup-steps">
-                        <div class="close-btn">
-                            <span class="close">&times;</span>
+                        <div class="close-btn" onclick="closeModal()">
+                            <a class="close" >&times;</a>
                         </div>
                         <div class="steps-count">
-                            <strong>Step 1 of 2</strong>
+                            <strong>Step 1 of 3</strong>
                         </div>
                     </div>
                     <div class="create-account-info">
@@ -79,7 +79,7 @@
                                 <label for="name"><strong>Name</strong></label>
                             </div>
                             <div class="signup-input">
-                                <input type="text" id="name" />
+                                <input type="text" id="name" autocomplete="false"/>
                             </div>
                         </div>
                         <div class="email">
@@ -87,7 +87,7 @@
                                 <label for="email"><strong>Email</strong></label>
                             </div>
                             <div class="signup-input">
-                                <input type="text" id="email" />
+                                <input type="email" id="email" autocomplete="false"/>
                             </div>
                         </div>
                         <div class="date-of-birth">
@@ -132,25 +132,49 @@
                 </div>
                 <div class="modal-content-step-two display-none" id="modal-content-step-two">
                     <div class="signup-steps">
-                        <div class="close-btn">
-                            <a class="close" onclick="close()">&times;</a>
+                        <div class="close-btn" onclick="closeModal()">
+                            <a class="close" >&times;</a>
                         </div>
                         <div class="steps-count">
-                            <strong>Step 2 of 2</strong>
+                            <strong>Step 2 of 3</strong>
                         </div>
                     </div>
                     <div class="create-account-info">
                         <h1>Verify Your Account</h1>
                     </div>
                     <div class="create-account-info verify-account-text">
-                        <h4>Enter verification code</h4>    
+                        <h4>Enter verification code</h4>
                     </div>
                     <div class="create-account-info signup-input">
-                        <input type="text" id="verification-code" />
+                        <input type="text" id="verification-code" autocomplete="false"/>
                     </div>
                     <div class="create-account-info register">
                         <a class="register-next" onclick="registerStepTwo()">
                             <strong>Verify</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-content-step-three display-none" id="modal-content-step-three">
+                    <div class="signup-steps">
+                        <div class="close-btn">
+                            <a class="close" onclick="closeModal()">&times;</a>
+                        </div>
+                        <div class="steps-count">
+                            <strong>Step 3 of 3</strong>
+                        </div>
+                    </div>
+                    <div class="create-account-info">
+                        <h1>Choose your Username</h1>
+                    </div>
+                    <div class="create-account-info verify-account-text">
+                        <h4>Please enter your username</h4>
+                    </div>
+                    <div class="create-account-info signup-input">
+                        <input type="text" id="username" autocomplete="false"/>
+                    </div>
+                    <div class="create-account-info register">
+                        <a class="register-next" onclick="registerStepThree()">
+                            <strong>Confirm</strong>
                         </a>
                     </div>
                 </div>
