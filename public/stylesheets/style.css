@@ -38,12 +38,12 @@ body {
     padding: 1em;
     margin: 0.5em;
     border-radius: 10em;
+    text-decoration: none;
   }
   /* .signup-with {
     background-color: #fff;
     color: black;
     font-size: small;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
     padding: 1em;
     margin: 0.5em;
