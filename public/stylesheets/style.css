@@ -1,20 +1,20 @@
 body {
     margin: 0%;
-  }
-  .main-page {
+}
+.main-page {
     background-color: black;
     color: white;
-  }
-  .content {
+}
+.content {
     display: flex;
     height: 100vh;
-  }
-  .flow-flock-intro {
+}
+.flow-flock-intro {
     color: white;
     text-shadow: 2px 2px 4px #5167c7;
-  }
-  .flow-flock-intro,
-  .flow-flock-joining {
+}
+.flow-flock-intro,
+.flow-flock-joining {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -22,14 +22,14 @@ body {
     align-items: center;
     height: 100vh;
     font-size: xx-large;
-  }
-  .signup-account {
+}
+.signup-account {
     width: 10em;
     text-align: center;
     display: flex;
     flex-direction: column;
-  }
-  .signup-with {
+}
+.signup-with {
     background-color: #fff;
     color: black;
     font-size: small;
@@ -39,8 +39,8 @@ body {
     margin: 0.5em;
     border-radius: 10em;
     text-decoration: none;
-  }
-  /* .signup-with {
+}
+/* .signup-with {
     background-color: #fff;
     color: black;
     font-size: small;
@@ -51,77 +51,77 @@ body {
     text-align: center;
     border-radius: 10em;
   } */
-  .signup-icon {
+.signup-icon {
     margin-right: 0.5em;
-  }
-  .signup-icon-items {
+}
+.signup-icon-items {
     padding-bottom: 3px;
-  }
-  .signup-with:hover {
+}
+.signup-with:hover {
     background-color: rgb(196, 196, 192);
-  }
-  .signup-with:hover span {
+}
+.signup-with:hover span {
     text-decoration: underline;
-  }
-  .or {
+}
+.or {
     display: flex;
     flex-direction: row;
     font-size: medium;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-  }
-  .h-line {
+}
+.h-line {
     height: 1px;
     background-color: #555050;
     width: 100%;
-  }
-  .account-sign-in,
-  .create-account {
+}
+.account-sign-in,
+.create-account {
     font-size: medium;
     padding: 0.75em;
     margin: 0.5em;
     text-align: center;
     border-radius: 10em;
     cursor: pointer;
-  }
-  .create-account {
+}
+.create-account {
     background-color: rgb(29 144 240);
     color: #fff;
-  }
-  .account-sign-in {
+}
+.account-sign-in {
     border: 1px solid #fff;
     color: rgb(29 144 240);
     text-decoration: none;
-  }
-  .create-account:hover {
+}
+.create-account:hover {
     background-color: #5079f1;
-  }
-  .account-sign-in:hover {
+}
+.account-sign-in:hover {
     background-color: rgb(10, 24, 37);
     color: #fff;
-  }
-  .privacy-policy {
+}
+.privacy-policy {
     margin-left: 1em;
     text-align: left;
     font-size: x-small;
     color: rgb(113, 118, 123);
-  }
-  .link-detail {
+}
+.link-detail {
     color: #5079f1;
     cursor: pointer;
-  }
-  .already-account {
+}
+.already-account {
     text-align: left;
     font-size: medium;
     margin-top: 8%;
-  }
-  h1 {
+}
+h1 {
     margin: 0px;
     padding: 0px;
-  }
+}
 
-  .modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -130,62 +130,60 @@ body {
     /* height:80%;  */
     max-width: 600px;
     height: auto;
-    left: 50%; 
+    left: 50%;
     top: 30%;
-    transform: translate(-50%, -30%); 
-    overflow:scroll;
-    background-color: rgb(0,0,0);
+    transform: translate(-50%, -30%);
+    overflow: scroll;
+    background-color: rgb(0, 0, 0);
     border: 1px solid #888;
     border-radius: 10px;
+}
 
-  }
-  
-  /* Modal Content */
-  .modal-content {
+/* Modal Content */
+.modal-content {
     background-color: black;
     color: #fff;
     padding: 10px 20px 20px 20px;
     /* border: 1px solid #888; */
     /* width: 90%; */
-  }
-  .display-none {
+}
+.display-none {
     display: none;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: left;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-  }
-  .signup-steps{
+}
+.signup-steps {
     display: flex;
-    
-  }
-  .steps-count {
+}
+.steps-count {
     margin-left: 3em;
     padding-top: 5px;
-    font-size:large;
+    font-size: large;
     /* align-items: center; */
-  }
-  .create-account-info{
+}
+.create-account-info {
     display: flex;
     flex-direction: column;
     padding-left: 80px;
-    padding-right:80px
-  }
-  .create-account-text{
-    padding: 10px 0px 10px 0px
-  }
-  .signup-input input{
+    padding-right: 80px;
+}
+.create-account-text {
+    padding: 10px 0px 10px 0px;
+}
+.signup-input input {
     width: 100%;
     padding: 12px 20px;
     margin: 10px 0px 10px 0px;
@@ -193,40 +191,54 @@ body {
     color: #fff;
     border: 1px solid #aaaaaa;
     border-radius: 5px;
-  }
-  label{
+}
+label {
     color: #888;
-  }
-  .day-month-year {
+}
+.day-month-year {
     display: flex;
     justify-content: space-around;
-  }
-  .day-month-year select {
+}
+.day-month-year select {
     padding: 12px 20px;
     background-color: #000;
     color: #fff;
     border: 1px solid #aaaaaa;
     border-radius: 5px;
+}
 
-  }
-  .register{
+.register-error {
+  align-items: center;
+  margin-top: 30px;
+  /* padding: 0px 80px 0px 80px; */
+}
+.error {
+  color: rgb(208, 30, 30);
+  /* text-align: center; */
+}
+.register {
     display: flex;
     /* align-items: center; */
     justify-content: center;
     margin-top: 30px;
     /* padding: 0px 80px 0px 80px; */
-  }
-  .register-next{
+}
+.register-next {
     /* align-items: center; */
     text-align: center;
-    background-color:rgb(29 144 240);;
-    width:40%;
+    background-color: rgb(29 144 240);
+    width: 40%;
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
     text-decoration: none;
     color: #fff;
-  }
-  .register-next:hover {
+}
+.register-next:hover {
     background-color: #5079f1;
-  }
+}
+
+.username-error {
+  padding-left: 80px;
+  padding-right: 80px;
+}

@@ -64,7 +64,7 @@
                 <div class="modal-content-step-one" id="modal-content-step-one">
                     <div class="signup-steps">
                         <div class="close-btn" onclick="closeModal()">
-                            <a class="close" >&times;</a>
+                            <a class="close">&times;</a>
                         </div>
                         <div class="steps-count">
                             <strong>Step 1 of 3</strong>
@@ -79,7 +79,7 @@
                                 <label for="name"><strong>Name</strong></label>
                             </div>
                             <div class="signup-input">
-                                <input type="text" id="name" autocomplete="false"/>
+                                <input type="text" id="name" autocomplete="off" />
                             </div>
                         </div>
                         <div class="email">
@@ -87,7 +87,10 @@
                                 <label for="email"><strong>Email</strong></label>
                             </div>
                             <div class="signup-input">
-                                <input type="email" id="email" autocomplete="false"/>
+                                <input type="email" id="email" autocomplete="off" onkeypress="checkEmail()" />
+                            </div>
+                            <div class="inValidEmail display-none" id="inValidEmail">
+                                <div class="error">*Please Enter Valid Email Address.</div>
                             </div>
                         </div>
                         <div class="date-of-birth">
@@ -124,6 +127,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="register-error display-none" id="register-error">
+                        <div class="error">*Incomplete information. Please fill out all fields.</div>
+                    </div>
                     <div class="register">
                         <a class="register-next" onclick="registerStepOne()">
                             <strong>Register</strong>
@@ -133,7 +139,7 @@
                 <div class="modal-content-step-two display-none" id="modal-content-step-two">
                     <div class="signup-steps">
                         <div class="close-btn" onclick="closeModal()">
-                            <a class="close" >&times;</a>
+                            <a class="close">&times;</a>
                         </div>
                         <div class="steps-count">
                             <strong>Step 2 of 3</strong>
@@ -146,7 +152,7 @@
                         <h4>Enter verification code</h4>
                     </div>
                     <div class="create-account-info signup-input">
-                        <input type="text" id="verification-code" autocomplete="false"/>
+                        <input type="text" id="verification-code" autocomplete="off" />
                     </div>
                     <div class="create-account-info register">
                         <a class="register-next" onclick="registerStepTwo()">
@@ -170,7 +176,10 @@
                         <h4>Please enter your username</h4>
                     </div>
                     <div class="create-account-info signup-input">
-                        <input type="text" id="username" autocomplete="false"/>
+                        <input type="text" id="username" autocomplete="off" />
+                    </div>
+                    <div class="username-error display-none" id="username-error">
+                        <div class="error">*This Username has already be taken. Please try another one.</div>
                     </div>
                     <div class="create-account-info register">
                         <a class="register-next" onclick="registerStepThree()">
