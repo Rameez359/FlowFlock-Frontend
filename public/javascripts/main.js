@@ -14,11 +14,22 @@ window.onclick = function (event) {
     }
 };
 
-const closeModal = ()=> {
-    console.log("Working")
+const closeModal = () => {
+    console.log('Working');
     modal.style.display = 'none';
-}
+};
 
+const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
+const checkEmail = () => {
+    const email = document.getElementById('email').value;
+    if(isValidEmail(email)){
+        document.getElementById('inValidEmail').classList.add('display-none');
+    }
+}
 var dayDropdown = document.getElementById('day');
 var monthDropdown = document.getElementById('month');
 var yearDropdown = document.getElementById('year');

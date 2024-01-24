@@ -8,8 +8,9 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/signupWithGoogle", async (req, res, next) => {
-  const response = await fetch("http://localhost:3000/signupWithGoogle", {
+  const response = await fetch("http://localhost:3000/auth/google/callback", {
     method: "GET",
+    credentials: "include",
     headers: {
       // Add headers if needed
       // 'Content-Type': 'application/json',
