@@ -1,0 +1,50 @@
+<div class="modal-content-step-three display-none" id="modal-content-step-three">
+    <div class="modal-top">
+        <div class="close-btn">
+            <a class="close" onclick="closeModal()">&times;</a>
+        </div>
+        <div class="steps-count">
+            <strong>Step 3 of 3</strong>
+        </div>
+    </div>
+    <div class="modal-inner-content">
+        <div class="modal-inner-head create-account-text">
+            <h1>Choose your Username</h1>
+        </div>
+        <div class="verification-msg">
+            *Your account has been verified successfully. Please choose your username and password.
+        </div>
+        <div>
+            <div class="label">
+                <label for="username"><strong>Enter username</strong></label>
+            </div>
+            <div class="modal-input">
+                <input type="text" id="username" autocomplete="off" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                <label for="password"><strong>Password</strong></label>
+            </div>
+            <div class="modal-input">
+                <input type="password" id="password" autocomplete="off" />
+            </div>
+        </div>
+        <div>
+            <div class="label">
+                <label for="confirm-password"><strong>Confirm Password</strong></label>
+            </div>
+            <div class="modal-input">
+                <input type="password" id="confirm-password" autocomplete="off" />
+            </div>
+        </div>
+        <div class="modal-error display-none" id="username-error">
+        </div>
+
+        <div class="modal-btn">
+            <a class="modal-btn-txt" onclick="registerStepThree()">
+                <strong>Confirm</strong>
+            </a>
+        </div>
+    </div>
+</div>

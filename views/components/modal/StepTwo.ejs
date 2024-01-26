@@ -1,0 +1,32 @@
+<div class="modal-content-step-two display-none" id="modal-content-step-two">
+    <div class="modal-top">
+        <div class="close-btn" onclick="closeModal()">
+            <a class="close">&times;</a>
+        </div>
+        <div class="steps-count">
+            <strong>Step 2 of 3</strong>
+        </div>
+    </div>
+    <div class="modal-inner-content">
+        <div class="modal-inner-head">
+            <h1>Verify Your Account</h1>
+        </div>
+        <div class="verification-msg">*Verification code sent to your email. Please enter to verify your account.</div>
+        <div>
+            <div class="label">
+                <label for="verification-code"><strong>Enter verification code</strong></label>
+            </div>
+            <div class="modal-input signup-input">
+                <input type="text" id="verification-code" oninput="validateNumberInput(this)" />
+            </div>
+        </div>
+        <div class="register-error modal-error display-none" id="code-error">
+            <div class="error">*Incomplete information. Please fill out all fields.</div>
+        </div>
+    </div>
+    <div class="modal-btn" onclick="registerStepTwo()">
+        <a class="modal-btn-txt">
+            <strong>Verify</strong>
+        </a>
+    </div>
+</div>
