@@ -1,4 +1,4 @@
-<div class="modal-content-step-one" id="modal-content-step-one">
+<div class="modal-content-step-one display-none" id="modal-content-step-one">
     <div class="signup-steps modal-top">
         <div class="close-btn" onclick="closeModal()">
             <a class="close">&times;</a>
@@ -24,7 +24,7 @@
                 <label for="email"><strong>Email</strong></label>
             </div>
             <div class="modal-input">
-                <input type="email" id="email" autocomplete="off" onkeypress="checkEmail()" />
+                <input type="email" id="email" autocomplete="off" onchange="checkEmail()" />
             </div>
             <div class="inValidEmail display-none" id="inValidEmail">
                 <div class="error">*Please Enter Valid Email Address.</div>
