@@ -77,7 +77,7 @@ const registerStepThree = async () => {
     const checkUsername = await postData(`${SERVER_URL}/checkDuplicateUsername`, { username });
 
     if (checkUsername.requestStatus === 'FALSE') {
-        displayError('username-error', '**Incomplete information. Please fill out all fields.');
+        displayError('username-error', '**This username is already register.');
         return false;
     } else {
         const userId = localStorage.getItem('userId');
