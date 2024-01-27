@@ -2,18 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <link
-            rel="stylesheet"
-            href="stylesheets/style.css"
-        />
-        <script
-            src="https://kit.fontawesome.com/2e4f9a987e.js"
-            crossorigin="anonymous"
-        ></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="stylesheets/style.css" />
+        <script src="https://kit.fontawesome.com/2e4f9a987e.js" crossorigin="anonymous"></script>
         <!-- <link rel="stylesheet" href="../styles/main.css" /> -->
         <title>Sign Up for FlowFlock</title>
     </head>
@@ -27,24 +18,15 @@
                     <h1>Happening Now</h1>
                     <h5>Join today.</h5>
                     <div class="signup-account">
-                        <a
-                            href="signupWithGoogle"
-                            class="signup-with"
-                        >
+                        <a href="signupWithGoogle" class="signup-with">
                             <span class="signup-icon-items">
-                                <i
-                                    class="fa-brands fa-google fa-xl signup-icon"
-                                    style="color: #d51010"
-                                ></i>
+                                <i class="fa-brands fa-google fa-xl signup-icon" style="color: #d51010"></i>
                                 Sign up with Google
                             </span>
                         </a>
                         <a class="signup-with">
                             <span class="signup-icon-items">
-                                <i
-                                    class="fa-brands fa-facebook fa-xl signup-icon"
-                                    style="color: #1041d5"
-                                ></i>
+                                <i class="fa-brands fa-facebook fa-xl signup-icon" style="color: #1041d5"></i>
                                 Sign up with Facebook
                             </span>
                         </a>
@@ -53,39 +35,23 @@
                             <div class="">or</div>
                             <div class="h-line"></div>
                         </div>
-                        <a
-                            class="create-account"
-                            id="create-account"
-                        >
+                        <a class="create-account" id="create-account" onclick="OpenSignUpModal()">
                             <span class="signup-icon-items">
-                                <strong
-                                    >Create Account</strong
-                                >
+                                <strong>Create Account</strong>
                             </span>
                         </a>
                         <div class="privacy-policy">
                             By signing up, you agree to the
-                            <span class="link-detail"
-                                >Terms of Service</span
-                            >
+                            <span class="link-detail">Terms of Service</span>
                             and
-                            <span class="link-detail"
-                                >Privacy Policy,</span
-                            >
+                            <span class="link-detail">Privacy Policy,</span>
                             including
-                            <span class="link-detail"
-                                >Cookie Use.</span
-                            >
+                            <span class="link-detail">Cookie Use.</span>
                         </div>
                         <a class="already-account">
-                            <strong
-                                >Already have an account?
-                            </strong>
+                            <strong>Already have an account? </strong>
                         </a>
-                        <a
-                            href="/signin"
-                            class="account-sign-in"
-                        >
+                        <a class="account-sign-in" onclick="OpenSignInModal()">
                             <span class="signup-icon-items">
                                 <strong>Sign in</strong>
                             </span>
@@ -94,14 +60,8 @@
                 </div>
             </div>
         </div>
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <%- include('components/modal/StepOne') %>
-                <%- include('components/modal/StepTwo') %>
-                <%-include('components/modal/StepThree') %>
-            </div>
-        </div>
+        <%- include('components/modal/myModal') %>
+
         <!-- <footer>&copy; 2024 Twitter Clone</footer> -->
     </body>
 </html>

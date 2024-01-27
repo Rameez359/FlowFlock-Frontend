@@ -1,38 +1,38 @@
 <div class="sign-in display-none" id="sign-in">
-    <div class="signup-steps">
+    <div class="modal-top">
         <div class="close-btn" onclick="closeModal()">
             <a class="close">&times;</a>
         </div>
     </div>
-    <div class="create-account-info">
-        <div class="create-account-text">
+    <div class="modal-inner-content">
+        <div class="modal-inner-head">
             <h1>Sign in your account</h1>
         </div>
-        <div class="name">
+        <div>
             <div class="label">
-                <label for="name"><strong>Username/Gmail</strong></label>
+                <label for="username-mail"><strong>Username/Gmail</strong></label>
             </div>
-            <div class="signup-input">
-                <input type="text" id="name" autocomplete="off" />
+            <div class="modal-input">
+                <input type="text" id="username-mail" oninput="checkEmail()" />
             </div>
-        </div>
-        <div class="password">
-            <div class="label">
-                <label for="password"><strong>Password</strong></label>
-            </div>
-            <div class="signup-input">
-                <input type="password" id="Password" autocomplete="off" />
-            </div>
-            <div class="display-none" id="">
+            <div class="inValidEmail display-none" id="inValidEmail">
                 <div class="error">*Please Enter Valid Email Address.</div>
             </div>
         </div>
+        <div>
+            <div class="label">
+                <label for="password"><strong>Password</strong></label>
+            </div>
+            <div class="modal-input">
+                <input type="text" id="password" oninput="" />
+            </div>
+        </div>
     </div>
-    <div class="register-error display-none" id="register-error">
+    <div class="modal-error display-none" id="signin-error">
         <div class="error">*Incomplete information. Please fill out all fields.</div>
     </div>
-    <div class="signin register">
-        <a class="signin-account register-next" onclick="signIn()">
+    <div class="modal-btn">
+        <a class="modal-btn-txt" onclick="signIn()">
             <strong>Sign in</strong>
         </a>
     </div>

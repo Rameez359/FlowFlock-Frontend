@@ -2,16 +2,33 @@
 var modal = document.getElementById('myModal');
 var btn = document.getElementById('create-account');
 
-btn.onclick = function () {
-    var newColor = 'lightblue';
-    document.body.style.backgroundColor = newColor;
-    modal.style.display = 'block';
-};
+// btn.onclick = function () {
+//     var newColor = 'lightblue';
+//     document.body.style.backgroundColor = newColor;
+//     modal.style.display = 'block';
+// };
 
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
+};
+
+const OpenSignUpModal = () => {
+    console.log('sign up button clicked');
+    document.getElementById('modal-content-step-one').classList.remove('display-none');
+    document.getElementById('sign-in').classList.add('display-none');
+
+    modal.style.display = 'block';
+};
+const OpenSignInModal = () => {
+    console.log('sign in button clicked');
+    document.getElementById('modal-content-step-one').classList.add('display-none');
+    document.getElementById('modal-content-step-two').classList.add('display-none');
+    document.getElementById('modal-content-step-three').classList.add('display-none');
+
+    document.getElementById('sign-in').classList.remove('display-none');
+    modal.style.display = 'block';
 };
 
 const closeModal = () => {
@@ -26,14 +43,17 @@ const isValidEmail = (email) => {
 
 const checkEmail = () => {
     const email = document.getElementById('email').value;
-    if(isValidEmail(email)){
-        document.getElementById('inValidEmail').classList.add('display-none');
+    if (!isValidEmail(email)) {
+        displayError('inValidEmail', '*Please Enter Valid Email Address.');
+        return false;
     }
-}
+    removeError('inValidEmail')
+    return true;
+};
 
 const validateNumberInput = (input) => {
     input.value = input.value.replace(/\D/g, '');
-}
+};
 
 function playError() {
     const audio = new Audio('audios/error.mp3'); // Replace with the path to your audio file
@@ -45,6 +65,10 @@ function displayError(messageId, errorMessage) {
     const errorElement = document.getElementById(messageId);
     errorElement.innerHTML = `<div class="error">${errorMessage}</div>`;
     errorElement.classList.remove('display-none');
+}
+function removeError(messageId) {
+    const errorElement = document.getElementById(messageId);
+    errorElement.classList.add('display-none');
 }
 
 var dayDropdown = document.getElementById('day');

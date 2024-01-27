@@ -8,26 +8,38 @@ const registerStepOne = async () => {
         const day = document.getElementById('day').value;
         const year = document.getElementById('year').value;
 
-        if (name && email && month && day && year) {
-            const dateOfBirth = new Date(`${year}-${month}-${day}`);
-            console.log(dateOfBirth);
-            const data = {
-                name: name,
-                email: email,
-                dateOfBirth: dateOfBirth,
-            };
-            const response = await postData(`${SERVER_URL}/localSignupStepOne`, data);
-            console.log('Success:', response);
-
-            if (response.statusCode === 200) {
-                localStorage.setItem('userId', `${response.response.userId}`);
-            }
-            document.getElementById('modal-content-step-one').classList.add('display-none');
-            document.getElementById('modal-content-step-two').classList.remove('display-none');
-        } else {
-            playError();
-            document.getElementById('register-error').classList.remove('display-none');
+        if (!(name && email && month && day && year)) {
+            displayError('register-error', '*Incomplete information. Please fill out all fields.');
+            return false;
         }
+        if(!isValidEmail(email)){
+            displayError('inValidEmail', '*Please Enter Valid Email Address.');
+            return false;
+        }
+        const dateOfBirth = new Date(`${year}-${month}-${day}`);
+        console.log(dateOfBirth);
+
+        const verifyAccount = await getData(`${SERVER_URL}/checkDuplicateAccount`, { email });
+        if (verifyAccount.requestStatus !== 'TRUE') {
+            displayError(
+                'register-error',
+                '*This email is already registered. Please sign in or use a different email to create a new account.'
+            );
+            return false;
+        }
+        const data = {
+            name: name,
+            email: email,
+            dateOfBirth: dateOfBirth,
+        };
+        const response = await postData(`${SERVER_URL}/localSignupStepOne`, data);
+        console.log('Success:', response);
+
+        if (response.statusCode === 200) {
+            localStorage.setItem('userId', `${response.response.userId}`);
+        }
+        document.getElementById('modal-content-step-one').classList.add('display-none');
+        document.getElementById('modal-content-step-two').classList.remove('display-none');
     } catch (error) {
         console.error(`Error in registration step one: ${error}`);
     }
