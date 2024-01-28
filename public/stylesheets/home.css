@@ -1,0 +1,55 @@
+body {
+    margin: 0%;
+    background-color: black;
+    color: white;
+}
+
+.home-header {
+    text-align: center;
+    font-size: x-large;
+}
+.home-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.feed-content {
+    flex-grow: 2;
+    text-align: center;
+
+}
+.sidebar, .updates {
+    flex-basis: 250px;
+    text-align: center;
+
+}
+.home-item {
+    position: relative;
+  }
+.home-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0.4px; /* Width of the vertical line */
+    background-color: #eceaea; /* Color of the vertical line */
+  }
+  .your-feed {
+    display: flex;
+    justify-content: space-between;
+  }
+  .for-you {
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+  .following{
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+.feed-type:hover {
+    text-decoration: underline;
+}

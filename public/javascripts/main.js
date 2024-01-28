@@ -16,11 +16,15 @@ window.onclick = function (event) {
 
 const OpenSignUpModal = () => {
     console.log('sign up button clicked');
-    document.getElementById('modal-content-step-one').classList.remove('display-none');
+
+    document.getElementById('modal-content-step-two').classList.add('display-none');
+    document.getElementById('modal-content-step-three').classList.add('display-none');
     document.getElementById('sign-in').classList.add('display-none');
 
+    document.getElementById('modal-content-step-one').classList.remove('display-none');
     modal.style.display = 'block';
 };
+
 const OpenSignInModal = () => {
     console.log('sign in button clicked');
     document.getElementById('modal-content-step-one').classList.add('display-none');

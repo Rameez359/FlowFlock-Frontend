@@ -1,5 +1,7 @@
 const SERVER_URL = 'http://localhost:3000';
+const CLIENT_URL = 'http://localhost:3001';
 
+const get = document.getElementById;
 const registerStepOne = async () => {
     try {
         const name = document.getElementById('name').value;
@@ -12,7 +14,7 @@ const registerStepOne = async () => {
             displayError('register-error', '*Incomplete information. Please fill out all fields.');
             return false;
         }
-        if(!isValidEmail(email)){
+        if (!isValidEmail(email)) {
             displayError('inValidEmail', '*Please Enter Valid Email Address.');
             return false;
         }
@@ -102,5 +104,24 @@ const registerStepThree = async () => {
         const response = await postData(`${SERVER_URL}/localSignupStepThree`, data);
         console.log('Success:', response);
         closeModal();
+    }
+};
+
+const signIn = async () => {
+    const username_mail = get('username-mail').value;
+    const password = get('user-password').value;
+    if (!(username_mail && password)) {
+        displayError('signin-error', '*Incomplete information. Please fill out all fields.');
+        return false;
+    }
+
+    const data = {
+        username_mail: username_mail,
+        password: password,
+    };
+    const checkUser = await postData(`${SERVER_URL}/localSignIn`, data);
+    if (checkUser.statusCode === 200) {
+        console.log(JSON.stringify(checkUser));
+        window.location.href = `${CLIENT_URL}/home`;
     }
 };
