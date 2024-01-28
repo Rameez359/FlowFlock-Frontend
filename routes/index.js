@@ -7,6 +7,11 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
+/* GET home page. */
+router.get("/home", function (req, res, next) {
+  res.render("home");
+});
+
 router.get("/signupWithGoogle", async (req, res, next) => {
   const response = await fetch("http://localhost:3000/auth/google/callback", {
     method: "GET",
