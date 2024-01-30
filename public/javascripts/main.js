@@ -75,6 +75,11 @@ function removeError(messageId) {
     errorElement.classList.add('display-none');
 }
 
+function autoExpand(element) {
+    element.style.height = 'auto';
+    element.style.height = (element.scrollHeight) + 'px';
+}
+
 var dayDropdown = document.getElementById('day');
 var monthDropdown = document.getElementById('month');
 var yearDropdown = document.getElementById('year');

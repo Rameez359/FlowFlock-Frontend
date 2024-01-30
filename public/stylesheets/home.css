@@ -17,16 +17,15 @@ body {
 .feed-content {
     flex-grow: 2;
     text-align: center;
-
 }
-.sidebar, .updates {
+.sidebar,
+.updates {
     flex-basis: 250px;
     text-align: center;
-
 }
 .home-item {
     position: relative;
-  }
+}
 .home-item:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -35,21 +34,42 @@ body {
     height: 100%;
     width: 0.4px; /* Width of the vertical line */
     background-color: #eceaea; /* Color of the vertical line */
-  }
-  .your-feed {
+}
+.your-feed {
     display: flex;
     justify-content: space-between;
-  }
-  .for-you {
+    border: 1px solid #888;
+}
+.for-you {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
-  }
-  .following{
+}
+.following {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
-  }
+}
+.feed-type-active {
+    padding-bottom: 5px;
+    font-size: large;
+    border-bottom: 3px solid rgb(29 144 240);
+}
+.feed-type {
+    padding: 10px;
+}
 .feed-type:hover {
-    text-decoration: underline;
+    background-color: #212020;
+}
+.what-happening-text {
+    height: fit-content;
+    min-height: 50px;
+    width: 100%;
+    padding:15px;
+    border-bottom: 1px solid #888;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    word-wrap: break-word; /* Allow words to break and wrap to the next line */
+    white-space: pre-wrap; /* Preserve line breaks and wrap text as needed */
+    overflow-wrap: break-word;
+    text-align: left;
 }

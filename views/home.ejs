@@ -17,14 +17,16 @@
                 <h1>Sidebar</h1>
             </div>
             <div class="feed-content home-item">
-                <h1>Feed</h1>
                 <div class="your-feed">
                     <div class="for-you feed-type">
-                        <a>For You</a>
+                        <span class="feed-type-active"><strong>For You</strong> </span>
                     </div>
                     <div class="following feed-type">
-                        <a>Following</a>
+                        <span class=""><strong>Following</strong></span>
                     </div>
+                </div>
+                <div class="what-happening">
+                    <div class="what-happening-text" id="what-happening-text" contenteditable="true" oninput="autoExpand(this)"></div>
                 </div>
             </div>
             <div class="updates home-item">
