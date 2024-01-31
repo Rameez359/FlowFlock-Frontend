@@ -1,7 +1,6 @@
 const SERVER_URL = 'http://localhost:3000';
 const CLIENT_URL = 'http://localhost:3001';
 
-const get = document.getElementById;
 const registerStepOne = async () => {
     try {
         const name = document.getElementById('name').value;
@@ -108,8 +107,8 @@ const registerStepThree = async () => {
 };
 
 const signIn = async () => {
-    const username_mail = get('username-mail').value;
-    const password = get('user-password').value;
+    const username_mail = document.getElementById('username-mail').value;
+    const password = document.getElementById('user-password').value;
     if (!(username_mail && password)) {
         displayError('signin-error', '*Incomplete information. Please fill out all fields.');
         return false;
