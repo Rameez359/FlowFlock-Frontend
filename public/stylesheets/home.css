@@ -73,27 +73,3 @@ body {
     overflow-wrap: break-word;
     text-align: left;
 }
-
-.wrapper{
-	perspective:1000px;
-	
-
-}
-.spinner{
-	width:2rem;
-	height:2.8rem;
-	background-color:cyan;
-	animation:3s linear infinite  spin forwards;	
-}
-@keyframes spin{
-	0%,100%{
-		transform:rotate(0deg);
-		
-}30%{
-		transform:rotateY(360deg) ;
-		
-	}70%{
-		transform:rotateX(360deg);
-		
-	}
-}
