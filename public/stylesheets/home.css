@@ -61,6 +61,9 @@ body {
 .feed-type:hover {
     background-color: #212020;
 }
+.what-happening {
+    display: flex;
+}
 .what-happening-text {
     height: fit-content;
     min-height: 50px;
@@ -72,4 +75,10 @@ body {
     white-space: pre-wrap; /* Preserve line breaks and wrap text as needed */
     overflow-wrap: break-word;
     text-align: left;
+}
+.profile-pic-post{
+    height:100px;
+    background-color: #eceaea;
+    width: 100px;
+    border-radius: 50px;
 }
